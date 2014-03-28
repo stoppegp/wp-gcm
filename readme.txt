@@ -25,21 +25,21 @@ If you don't know what GCM is then please go to: http://developer.android.com/go
 Go to <http://px.hj.cx/wp/wp-admin> there's also a demo Android App to test!!
 
 = COMING SOON =
-*- Demo Android Eclipse Project,
-*- For a little fee custom Android Blog App,
+*Demo Android Eclipse Project,
+*For a little fee custom Android Blog App,
 
 == Installation ==
-1. Upload the folder 'gcm' to the '/wp-content/plugins' directory on your server.,
-2. Go to 'Plugins' trough the admin dashboard and activate the plugin.,
-3. After the activation you will be redirected to the settings page where you can setup the plugin. You need your Api-key.,
+1. Upload the folder 'gcm' to the '/wp-content/plugins' directory on your server,
+2. Go to 'Plugins' trough the admin dashboard and activate the plugin,
+3. After the activation you will be redirected to the settings page where you can setup the plugin. You need your Api-key,
 4. When everything is setted up click save, and your finished!,
 Now you can write Messages.
 ___________
 
-In your Android App you need to set the registration url to the following: {BLOG URL}/wp-content/plugins/gcm/register.php
-You also need to include the " regId " parameter in the url containing the device regId.
-A sample URL : " http:// www.myblog. com/wp-content/plugins/gcm/register.php?regId=AbCdEfG12345 "
-When you need help, visit : http://developer.android.com/google/gcm/index.html
+In your Android App you need to set the registration url to the following: '{BLOGURL}'
+and just include the 'regId' parameter in the url containing the device regId.
+A sample url: 'http://www.myblog.com/?regId=AbCdEfG12345'
+When you need help, visit: <http://developer.android.com/google/gcm/index.html>
 
 == Frequently Asked Questions ==
 = Where to find the Api Key ? =
@@ -61,5 +61,5 @@ A: Yes! Go to <http://px.hj.cx/wp/wp-admin>,you'll find there also a working app
 2. Settings page,
 
 == Changelog ==
-*1.1.9 Public Release,
-*1.2 A few little improvements, and added a demo site.,
+* 1.1.9 Public Release,
+* 1.2 A few little improvements, and added a demo site.,
