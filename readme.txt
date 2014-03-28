@@ -25,8 +25,8 @@ If you don't know what GCM is then please go to: http://developer.android.com/go
 Go to <http://px.hj.cx/wp/wp-admin> there's also a demo Android App to test!!
 
 = COMING SOON =
-*Demo Android Eclipse Project,
-*For a little fee custom Android Blog App,
+* Demo Android Eclipse Project,
+* For a little fee custom Android Blog App,
 
 == Installation ==
 1. Upload the folder 'gcm' to the '/wp-content/plugins' directory on your server,
