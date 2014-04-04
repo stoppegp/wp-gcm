@@ -6,7 +6,7 @@ function px_gcm_register() {
     
    global $wpdb;   
    $gcm_regid = $_GET["regId"];
-   $time = time();   
+   $time = date("Y-m-d H:i:s");   
    $px_table_name = $wpdb->prefix.'gcm_users';
     
    $sql = "SELECT gcm_regid FROM $px_table_name WHERE gcm_regid='$gcm_regid'";

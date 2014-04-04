@@ -5,7 +5,7 @@ Tags: gcm, c2d, android, google, cloud, messaging, google cloud messaging,
 Donation Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2YCTDL7AFRHHG
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-3.0.html
 
@@ -18,9 +18,11 @@ You just need your Api-Key!
 This Plugin can notify, when you want it, your users with your GCM App when a new post is published or a post was updated.
 Of course you can also write them messages, e.g. when a special post is posted, or something like that
 
-You can ONLY use this Plugin if you have an Android App which uses GCM AND is connected to your api key. 
+You can ONLY use this Plugin if you have an Android App which uses GCM AND is connected to your api-key. 
 If you don't know what GCM is then please go to: http://developer.android.com/google/gcm/index.html
 
+Now the Plugin deletes Device IDs if they no longer active and delete the coressponding app to your api-key.
+And now it also deletes multiple IDs from the same device.
 = Test the new Demo Site! =
 Go to <http://px.hj.cx/wp/wp-admin> there's also a demo Android App to test!!
 
@@ -62,4 +64,5 @@ A: Yes! Go to <http://px.hj.cx/wp/wp-admin>,you'll find there also a working app
 
 == Changelog ==
 * 1.1.9 Public Release,
-* 1.2 A few little improvements, and added a demo site.,
+* 1.2.0 A few little improvements, and added a demo site.,
+* 1.2.1 Bugs fixed,

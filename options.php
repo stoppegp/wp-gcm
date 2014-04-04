@@ -75,20 +75,20 @@ function px_gcm_settings_validate($arr_input) {
 * Send notification for post update
 *
 */
-$options = get_option('gcm_setting');
-if($options['snpi'] != false && is_single()){
-function px_update_notification( $new_status, $old_status, $post ) {
-    if ( $old_status != 'publish' && $new_status == 'publish' ) {
+function px_update_notification($new_status, $old_status, $post) {
+  $options = get_option('gcm_setting');
+  if($options['snpi'] != false){
+    if ($old_status != 'publish' && $new_status == 'publish' && 'post' == get_post_type($post)) {
 
-	$post_title = get_the_title($post);
-	$post_url = get_permalink($post);
-	$message = __('Post updated','px_gcm').":\n";
-	$message .= $post_title . ": " . $post_url;
+    $post_title = get_the_title($post);
+	   $post_url = get_permalink($post);
+    $message = __('Post updated','px_gcm')."\n";
+	   $message .= $post_title . ": " . $post_url;
 
     // Send notification
     px_sendGCM($message);
+    }
    }
- }
 }
 
 /*
@@ -96,20 +96,20 @@ function px_update_notification( $new_status, $old_status, $post ) {
 * Send notification for new post
 *
 */
-$options = get_option('gcm_setting');
-if($options['snpi'] != false && is_single() == true){
-function px_new_notification( $new_status, $old_status, $post ) {
-    if ( $old_status != 'publish' && $new_status == 'publish' ) {
+function px_new_notification($new_status, $old_status, $post) {
+  $options = get_option('gcm_setting');
+  if($options['snpi'] != false){
+    if ($old_status != 'publish' && $new_status == 'publish' && 'post' == get_post_type($post)) {
 
-	$post_title = get_the_title($post);
-	$post_url = get_permalink($post);
-	$message = __('New post','px_gcm').":\n";
-	$message .= $post_title . ": " . $post_url;
+	   $post_title = get_the_title($post);
+	   $post_url = get_permalink($post);
+	   $message = __('New post','px_gcm')."\n";
+	   $message .= $post_title . ": " . $post_url;
 
     // Send notification
     px_sendGCM($message);
+    }
    }
- }
 }
 
 /*
@@ -158,6 +158,7 @@ function px_sendGCM($message) {
  
     $result = curl_exec($ch);
     $answer = json_decode($result);
+    $cano = px_canonical($answer);
     $suc = $answer->{'success'};
     $fail = $answer->{'failure'};
     $inf= "<div id='message' class='updated'><p><b>".__('Message sent.','px_gcm')."</b><i>&nbsp;&nbsp;($message)</i></p><p>".__('success:','px_gcm')." $suc  &nbsp;&nbsp;".__('fail:','px_gcm')." $fail </p></div>";
@@ -180,10 +181,47 @@ function px_getIds() {
     return $devices;
 }
 
-add_action( 'plugins_loaded', 'px_gcm_load_textdomain' );
+function px_canonical($answer) {
+   $allIds = px_getIds();
+   $resId = array();
+   $errId = array();
+   $err = array();
+   $can = array();
+   global $wpdb;
+   $px_table_name = $wpdb->prefix.'gcm_users';
+
+   foreach($answer->results as $index=>$element){
+    if(isset($element->registration_id)){
+     $resId[] = $index;
+    }
+   }
+
+   foreach($answer->results as $index=>$element){
+    if(isset($element->error)){
+      $errId[] = $index;
+    }
+   }
+
+   for ($i=0; $i<count($allIds); $i++) {
+    array_push($can, $allIds[$resId[$i]]);
+   }
+
+   for ($i=0; $i<count($allIds); $i++) {
+    array_push($err,$allIds[$errId[$i]]);
+   }
+
+   if($err != null) {
+     $s = $wpdb->query($wpdb->prepare("DELETE FROM $px_table_name WHERE gcm_regid=%s",$err));
+   } 
+   if($can != null) {
+     $r = $wpdb->query($wpdb->prepare("DELETE FROM $px_table_name WHERE gcm_regid=%s",$can));
+   }
+}
+
+add_action('plugins_loaded', 'px_gcm_load_textdomain');
 add_action('admin_init', 'px_register_settings');
-add_action( 'transition_post_status', 'px_update_notification');
-add_action( 'new', 'px_new_notification' );
-add_action( 'wp_before_admin_bar_render', 'px_gcm_toolbar', 999 );
+add_action('transition_post_status', 'px_update_notification',10,3);
+add_action('transition_post_status', 'px_new_notification',10,3);
+add_action('wp_before_admin_bar_render', 'px_gcm_toolbar', 999);
 
 ?>
