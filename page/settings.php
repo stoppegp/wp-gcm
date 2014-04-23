@@ -1,7 +1,4 @@
 <?php
-/*
-* The content of the settings page
-*/
 
 function px_display_page_setting() {
 ?>

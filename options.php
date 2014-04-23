@@ -25,8 +25,9 @@ function px_register_settings() {
 	add_settings_section('gcm_setting-section', '', 'gcm_section_callback', 'px-gcm');
 	add_settings_field('api-key', __('Api Key','px_gcm'), 'api_key_callback', 'px-gcm', 'gcm_setting-section');
 	add_settings_field('snpi', __('New post info','px_gcm'), 'snpi_callback', 'px-gcm', 'gcm_setting-section');
-        add_settings_field('supi', __('Updated post info','px_gcm'), 'supi_callback', 'px-gcm', 'gcm_setting-section');
-        add_settings_field('abd', __('Display admin bar link','px_gcm'), 'abd_callback', 'px-gcm', 'gcm_setting-section' );
+    add_settings_field('supi', __('Updated post info','px_gcm'), 'supi_callback', 'px-gcm', 'gcm_setting-section');
+    add_settings_field('abd', __('Display admin bar link','px_gcm'), 'abd_callback', 'px-gcm', 'gcm_setting-section' );
+	add_settings_field('debug', __('Show debug response','px_gcm'), 'debug_callback', 'px-gcm', 'gcm_setting-section' );
 	register_setting( 'px-gcm-settings-group', 'gcm_setting', 'px_gcm_settings_validate' );
 }
  
@@ -61,12 +62,19 @@ function abd_callback() {
 	echo $html;
 }
 
+function debug_callback() {
+    $options = get_option('gcm_setting');
+    $html = '<input type="checkbox" id="debug" name="gcm_setting[debug]" value="1"' . checked( 1, $options['debug'], false ) . '/>';
+	echo $html;
+}
+
 function px_gcm_settings_validate($arr_input) {
         $options = get_option('gcm_setting');
         $options['api-key'] = trim( $arr_input['api-key'] );
-	$options['snpi'] = trim( $arr_input['snpi'] );
+	    $options['snpi'] = trim( $arr_input['snpi'] );
         $options['supi'] = trim( $arr_input['supi'] );
         $options['abd'] = trim( $arr_input['abd'] );      
+		$options['debug'] = trim( $arr_input['debug'] ); 
         return $options;
 }
 
@@ -161,8 +169,13 @@ function px_sendGCM($message) {
     $cano = px_canonical($answer);
     $suc = $answer->{'success'};
     $fail = $answer->{'failure'};
+	$options = get_option('gcm_setting');
+    if($options['debug'] != false){
+	$inf= "<div id='message' class='updated'><p><b>".__('Message sent.','px_gcm')."</b><i>&nbsp;&nbsp;($message)</i></p><p>$answer</p></div>";
+	}else{
     $inf= "<div id='message' class='updated'><p><b>".__('Message sent.','px_gcm')."</b><i>&nbsp;&nbsp;($message)</i></p><p>".__('success:','px_gcm')." $suc  &nbsp;&nbsp;".__('fail:','px_gcm')." $fail </p></div>";
-    print_r($inf);
+    }
+	print_r($inf);
     curl_close($ch);
     return $result;
 }

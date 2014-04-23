@@ -1,7 +1,5 @@
 <?php
-/*
-* The content of the writing page
-*/
+
 function px_display_page_msg() {
   global $wpdb;
   $px_table_name = $wpdb->prefix.'gcm_users';

@@ -4,8 +4,8 @@ Plugin  URI: http://wordpress.org/plugins/wp-gcm
 Tags: gcm, c2d, android, google, cloud, messaging, google cloud messaging, wp gcm, wp-gcm
 Donation Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2YCTDL7AFRHHG
 Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 1.2.1
+Tested up to: 3.9
+Stable tag: 1.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-3.0.html
 
@@ -33,7 +33,7 @@ Go to <http://px.hj.cx/wp/wp-admin> there's also a demo Android App to test!!
 * For a little fee custom Android Blog App,
 
 == Installation ==
-1. Upload the folder 'gcm' to the '/wp-content/plugins' directory on your server,
+1. Upload the folder 'wp-gcm' to the '/wp-content/plugins' directory on your server,
 2. Go to 'Plugins' trough the admin dashboard and activate the plugin,
 3. After the activation you will be redirected to the settings page where you can setup the plugin. You need your Api-key,
 4. When everything is setted up click save, and your finished!,
@@ -58,6 +58,11 @@ A: You could go to: http://developer.android.com/google/gcm/index.html , and fol
 A: Yes! Go to <http://px.hj.cx/wp/wp-admin>,you'll find there also a working app!
 
 
+= Is this plugin translation ready ? =
+A: Yes, just copy the px_gcm.pot file from the lang directory of the plugin and translate it to your language. 
+If you want to contribute send me your translation and I will add it to the plugin!
+
+
 
 == Screenshots ==
 1. Writing a message,
@@ -65,6 +70,8 @@ A: Yes! Go to <http://px.hj.cx/wp/wp-admin>,you'll find there also a working app
 2. Settings page,
 
 == Changelog ==
-* 1.1.9 Public Release,
-* 1.2.0 A few little improvements, and added a demo site.,
+* 1.2.2 Added Debug Response
+        and French localization,
 * 1.2.1 Bugs fixed,
+* 1.2.0 A few little improvements, and added a demo site.,
+* 1.1.9 Public Release,

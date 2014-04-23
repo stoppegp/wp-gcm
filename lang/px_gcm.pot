@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP GCM Plugin\n"
-"POT-Creation-Date: 2014-03-15 18:15+0100\n"
-"PO-Revision-Date: 2014-03-15 18:15+0100\n"
+"POT-Creation-Date: 2014-04-23 15:02+0100\n"
+"PO-Revision-Date: 2014-04-23 15:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: Deniz Celebi, Pixelart <office@pixelartdev.com>\n"
 "Language: en\n"
@@ -15,79 +15,105 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../gcm/options.php:6 ../gcm/options.php:13 ../gcm/page/write.php:26
+#: ../1.1.9/options.php:6 ../1.1.9/options.php:13 ../1.1.9/page/write.php:26
+#: ../1.2.0/options.php:6 ../1.2.0/options.php:13 ../1.2.0/page/write.php:26
+#: ../1.2.1/options.php:6 ../1.2.1/options.php:13 ../1.2.1/page/write.php:26
+#: ../1.2.2/options.php:6 ../1.2.2/options.php:13 ../1.2.2/page/write.php:24
 msgid "New Message"
 msgstr ""
 
-#: ../gcm/options.php:7 ../gcm/options.php:14
+#: ../1.1.9/options.php:7 ../1.1.9/options.php:14 ../1.2.0/options.php:7
+#: ../1.2.0/options.php:14 ../1.2.1/options.php:7 ../1.2.1/options.php:14
+#: ../1.2.2/options.php:7 ../1.2.2/options.php:14
 msgid "Settings"
 msgstr ""
 
-#: ../gcm/options.php:26
+#: ../1.1.9/options.php:26 ../1.2.0/options.php:26 ../1.2.1/options.php:26
+#: ../1.2.2/options.php:26
 msgid "Api Key"
 msgstr ""
 
-#: ../gcm/options.php:27
+#: ../1.1.9/options.php:27 ../1.2.0/options.php:27 ../1.2.1/options.php:27
+#: ../1.2.2/options.php:27
 msgid "New post info"
 msgstr ""
 
-#: ../gcm/options.php:28
+#: ../1.1.9/options.php:28 ../1.2.0/options.php:28 ../1.2.1/options.php:28
+#: ../1.2.2/options.php:28
 msgid "Updated post info"
 msgstr ""
 
-#: ../gcm/options.php:29
+#: ../1.1.9/options.php:29 ../1.2.0/options.php:29 ../1.2.1/options.php:29
+#: ../1.2.2/options.php:29
 msgid "Display admin bar link"
 msgstr ""
 
-#: ../gcm/options.php:38
+#: ../1.1.9/options.php:38 ../1.2.0/options.php:38 ../1.2.1/options.php:38
+#: ../1.2.2/options.php:39
 msgid "Required settings for the plugin and the App."
 msgstr ""
 
-#: ../gcm/options.php:85
+#: ../1.1.9/options.php:85 ../1.2.0/options.php:85 ../1.2.1/options.php:85
+#: ../1.2.2/options.php:93
 msgid "Post updated"
 msgstr ""
 
-#: ../gcm/options.php:106
+#: ../1.1.9/options.php:106 ../1.2.0/options.php:106 ../1.2.1/options.php:106
+#: ../1.2.2/options.php:114
 msgid "New post"
 msgstr ""
 
-#: ../gcm/options.php:163
+#: ../1.1.9/options.php:163 ../1.2.0/options.php:163 ../1.2.1/options.php:164
+#: ../1.2.2/options.php:174 ../1.2.2/options.php:176
 msgid "Message sent."
 msgstr ""
 
-#: ../gcm/options.php:163
+#: ../1.1.9/options.php:163 ../1.2.0/options.php:163 ../1.2.1/options.php:164
+#: ../1.2.2/options.php:176
 msgid "success:"
 msgstr ""
 
-#: ../gcm/options.php:163
+#: ../1.1.9/options.php:163 ../1.2.0/options.php:163 ../1.2.1/options.php:164
+#: ../1.2.2/options.php:176
 msgid "fail:"
 msgstr ""
 
-#: ../gcm/page/settings.php:16
+#: ../1.1.9/page/settings.php:16 ../1.2.0/page/settings.php:17
+#: ../1.2.1/page/settings.php:17 ../1.2.2/page/settings.php:13
 msgid "Settings saved"
 msgstr ""
 
-#: ../gcm/page/settings.php:24
+#: ../1.1.9/page/settings.php:24 ../1.2.0/page/settings.php:25
+#: ../1.2.1/page/settings.php:25 ../1.2.2/page/settings.php:21
 msgid "GCM Settings"
 msgstr ""
 
-#: ../gcm/page/write.php:15
+#: ../1.1.9/page/write.php:15 ../1.2.0/page/write.php:15
+#: ../1.2.1/page/write.php:15 ../1.2.2/page/write.php:13
 #, php-format
 msgid "currently %s users are registered"
 msgstr ""
 
-#: ../gcm/page/write.php:29
+#: ../1.1.9/page/write.php:29 ../1.2.0/page/write.php:29
+#: ../1.2.1/page/write.php:29 ../1.2.2/page/write.php:27
 msgid "Enter here your message"
 msgstr ""
 
-#: ../gcm/page/write.php:31
+#: ../1.1.9/page/write.php:31 ../1.2.0/page/write.php:31
+#: ../1.2.1/page/write.php:31 ../1.2.2/page/write.php:29
 msgid "*Please don't use HTML"
 msgstr ""
 
-#: ../gcm/page/write.php:32
+#: ../1.1.9/page/write.php:32 ../1.2.0/page/write.php:32
+#: ../1.2.1/page/write.php:32 ../1.2.2/page/write.php:30
 msgid "Send"
 msgstr ""
 
-#: ../gcm/page/write.php:36
+#: ../1.1.9/page/write.php:36 ../1.2.0/page/write.php:36
+#: ../1.2.1/page/write.php:36 ../1.2.2/page/write.php:34
 msgid "Info"
+msgstr ""
+
+#: ../1.2.2/options.php:30
+msgid "Show debug response"
 msgstr ""
