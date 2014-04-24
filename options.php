@@ -86,7 +86,7 @@ function px_gcm_settings_validate($arr_input) {
 function px_update_notification($new_status, $old_status, $post) {
   $options = get_option('gcm_setting');
   if($options['snpi'] != false){
-    if ($old_status != 'publish' && $new_status == 'publish' && 'post' == get_post_type($post)) {
+    if ($old_status == 'publish' && $new_status == 'publish' && 'post' == get_post_type($post)) {
 
     $post_title = get_the_title($post);
 	   $post_url = get_permalink($post);
