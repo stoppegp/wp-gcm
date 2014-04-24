@@ -70,7 +70,7 @@ If you want to contribute send me your translation and I will add it to the plug
 2. Settings page,
 
 == Changelog ==
-* 1.2.3 Fixed Update Notification Bug (Thanks to [fiddelindell] (http://wordpress.org/support/profile/fiddelindell),
+* 1.2.3 Fixed Update Notification Bug (Thanks to fiddelindell <http://wordpress.org/support/profile/fiddelindell> ),
 * 1.2.2 Added Debug Response
         and French localization,
 * 1.2.1 Bugs fixed,
