@@ -5,7 +5,7 @@ Tags: gcm, c2d, android, google, cloud, messaging, google cloud messaging, wp gc
 Donation Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2YCTDL7AFRHHG
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-3.0.html
 
@@ -71,7 +71,8 @@ If you want to contribute send me your translation and I will add it to the plug
 2. Settings page,
 
 == Changelog ==
-* 1.2.4 Fixed Error Message on a blank installation (Thanks to oeoeoeooeo <http://wordpress.org/support/profile/oeoeoeooeo>
+* 1.2.5 Fixeed Error with the debug message (Thanks again to oeoeoeooeo <http://wordpress.org/support/profile/oeoeoeooeo> ),
+* 1.2.4 Fixed Error Message on a blank installation (Thanks to oeoeoeooeo <http://wordpress.org/support/profile/oeoeoeooeo> ),
 * 1.2.3 Fixed Update Notification Bug (Thanks to fiddelindell <http://wordpress.org/support/profile/fiddelindell> ),
 * 1.2.2 Added Debug Response
         and French localization,

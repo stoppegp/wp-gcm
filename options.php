@@ -171,7 +171,7 @@ function px_sendGCM($message) {
     $fail = $answer->{'failure'};
 	$options = get_option('gcm_setting');
     if($options['debug'] != false){
-	$inf= "<div id='message' class='updated'><p><b>".__('Message sent.','px_gcm')."</b><i>&nbsp;&nbsp;($message)</i></p><p>$answer</p></div>";
+	$inf= "<div id='message' class='updated'><p><b>".__('Message sent.','px_gcm')."</b><i>&nbsp;&nbsp;($message)</i></p><p>$result</p></div>";
 	}else{
     $inf= "<div id='message' class='updated'><p><b>".__('Message sent.','px_gcm')."</b><i>&nbsp;&nbsp;($message)</i></p><p>".__('success:','px_gcm')." $suc  &nbsp;&nbsp;".__('fail:','px_gcm')." $fail </p></div>";
     }
