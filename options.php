@@ -125,9 +125,9 @@ function px_new_notification($new_status, $old_status, $post) {
 * Register ToolBar
 *
 */
-$options = get_option('gcm_setting');
-if($options['abd'] != false){
 function px_gcm_toolbar() {
+  $options = get_option('gcm_setting');
+  if($options['abd'] != false){
 	global $wp_admin_bar;
 	$page = get_site_url().'/wp-admin/admin.php?page=px-gcm';
 	$args = array(
@@ -136,7 +136,7 @@ function px_gcm_toolbar() {
 		'href'   =>  "$page",
 	);
 	$wp_admin_bar->add_menu($args);
-}
+  }
 }
 
 /*
