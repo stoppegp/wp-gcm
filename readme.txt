@@ -28,9 +28,10 @@ So your database is cleaner!
 = Test the new Demo Site! =
 Go to <http://px.hj.cx/wp/wp-admin> there's also a demo Android App to test!!
 
-= COMING SOON =
-* Demo Android Eclipse Project,
-* For a little fee custom Android Blog App,
+= Demo Android Project =
+Now there is inally a Demo Android Project available on GitHub!
+<https://github.com/Pixelartdev/GCM-Android-App/>
+Have fun with it!
 
 == Installation ==
 1. Upload the folder 'wp-gcm' to the '/wp-content/plugins' directory on your server,
