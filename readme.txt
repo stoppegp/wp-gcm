@@ -29,7 +29,7 @@ So your database is cleaner!
 Go to <http://px.hj.cx/wp/wp-admin> there's also a demo Android App to test!!
 
 = Demo Android Project =
-Now there is inally a Demo Android Project available on GitHub!
+Now there is finally a Demo Android Project available on GitHub!
 <https://github.com/Pixelartdev/GCM-Android-App/>
 Have fun with it!
 
