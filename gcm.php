@@ -5,7 +5,8 @@ Plugin  URI: http://wordpress.org/plugins/wp-gcm
 Description: Google Cloud Messaging Plugin for WordPress
 Version: 1.2.5
 Author: Deniz Celebi & Pixelart
-Author URI: GPLv3
+Author URI: http://profiles.wordpress.org/pixelart-dev/
+License: GPLv3
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-3.0.html
 
     Copyright 2014 Pixelart and Deniz Celebi  (email : office@pixelartdev.com)
