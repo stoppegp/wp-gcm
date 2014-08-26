@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: GCM
-Plugin  URI: http://wordpress.org/plugins/wp-gcm
+Plugin Name: GCM (edit)
+Plugin  URI: http://github.com/stoppegp/wp-gcm
 Description: Google Cloud Messaging Plugin for WordPress
 Version: 1.2.5
-Author: Deniz Celebi & Pixelart
+Author: Deniz Celebi & Pixelart (edit by stoppegp)
 Author URI: http://profiles.wordpress.org/pixelart-dev/
 License: GPLv3
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-3.0.html
