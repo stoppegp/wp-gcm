@@ -90,9 +90,14 @@ function px_update_notification($new_status, $old_status, $post) {
 
     $post_title = get_the_title($post);
 	   $post_url = get_permalink($post);
-    $message = __('Post updated','px_gcm')."\n";
-	   $message .= $post_title . ": " . $post_url;
 
+	   $message_array = array(
+		"type"	=>	"update",
+		"title"	=> $post_title,
+		"url"	=>	$post_url,
+	   );
+	   $message = JSON_encode($message_array);
+	   
     // Send notification
     px_sendGCM($message);
     }
@@ -111,9 +116,14 @@ function px_new_notification($new_status, $old_status, $post) {
 
 	   $post_title = get_the_title($post);
 	   $post_url = get_permalink($post);
-	   $message = __('New post','px_gcm')."\n";
-	   $message .= $post_title . ": " . $post_url;
 
+	   $message_array = array(
+		"type"	=>	"new",
+		"title"	=> $post_title,
+		"url"	=>	$post_url,
+	   );
+	   $message = JSON_encode($message_array);
+	   
     // Send notification
     px_sendGCM($message);
     }

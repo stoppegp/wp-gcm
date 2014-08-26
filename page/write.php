@@ -53,7 +53,11 @@ function px_display_page_msg() {
 }
 
 if(isset($_POST['message'])) {
-    $message = $_POST["message"];
+	$message_array = array(
+		"type"	=>	"message",
+		"message"	=> $_POST["message"],
+	   );
+	$message = JSON_encode($message_array);
     px_sendGCM($message);
 }
 ?>
