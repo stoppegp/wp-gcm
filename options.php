@@ -116,9 +116,11 @@ function px_new_notification($new_status, $old_status, $post) {
 
 	   $post_title = get_the_title($post);
 	   $post_url = get_permalink($post);
+	   $post_id = get_the_id($post);
 
 	   $message_array = array(
 		"type"	=>	"new",
+		"id"	=> $post_id,
 		"title"	=> $post_title,
 		"url"	=>	$post_url,
 	   );
